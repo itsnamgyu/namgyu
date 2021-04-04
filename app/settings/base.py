@@ -58,33 +58,14 @@ INSTALLED_APPS = [
     "bootstrap4",
     "dt_content",
     "django_summernote",
-    # Carousel
-    "versatileimagefield",
-    "carousel",
-    # Admin link
-    "admin_link",
     # Main project
     "core",
 ]
-
-SES_ENABLED = fetch_env("SES_ENABLED", "FALSE").upper() == "TRUE"
-SENDGRID_ENABLED = fetch_env("SENDGRID_ENABLED", "FALSE").upper() == "TRUE"
-SIMPLE_SENDGRID_ENABLED = (
-    fetch_env("SIMPLE_SENDGRID_ENABLED", "FALSE").upper() == "TRUE"
-)
-STRIPE_ENABLED = fetch_env("STRIPE_ENABLED", "FALSE").upper() == "TRUE"
-DT_STRIPE_ENABLED = fetch_env("DT_STRIPE_ENABLED", "FALSE").upper() == "TRUE"
 
 if DEBUG:
     # Live reload for development
     INSTALLED_APPS.insert(0, "livesync")
     INSTALLED_APPS.append("debug_toolbar")
-if STRIPE_ENABLED:
-    INSTALLED_APPS.append("django_stripe")
-if DT_STRIPE_ENABLED:
-    INSTALLED_APPS.append("dt_stripe")
-if SIMPLE_SENDGRID_ENABLED:
-    INSTALLED_APPS.append("simple_sendgrid")
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -220,9 +201,6 @@ ACCOUNT_LOGOUT_ON_GET = True
 
 ACCOUNT_EMAIL_SUBJECT_PREFIX = ""
 
-if SIMPLE_SENDGRID_ENABLED:
-    ACCOUNT_ADAPTER = "simple_sendgrid.allauth.account_adapter.AccountAdapter"
-
 SERVER_EMAIL = '"{} Administration" <admin@{}'.format(SITE_NAME, SITE_DOMAIN)
 DEFAULT_FROM_EMAIL = '"{}" <no-reply@{}>'.format(SITE_NAME, SITE_DOMAIN)
 
@@ -242,34 +220,5 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email']
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 """
-
-if SES_ENABLED:
-    # default region for django_ses is us-east-1
-    # for django-template, we set the default to us-west-2 (Oregon)
-    EMAIL_BACKEND = "django_ses.SESBackend"
-    logging.info("Using EMAIL_BACKEND: {}".format(EMAIL_BACKEND))
-    AWS_ACCESS_KEY_ID = require_env("AWS_ACCESS_KEY_ID")
-    AWS_SECRET_ACCESS_KEY = require_env("AWS_SECRET_ACCESS_KEY")
-    AWS_SES_REGION_NAME = fetch_env("AWS_SES_REGION_NAME", "us-west-2")
-    AWS_SES_REGION_ENDPOINT = "email.{}.amazonaws.com".format(AWS_SES_REGION_NAME)
-
-if SENDGRID_ENABLED:
-    EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-    logging.info("Using EMAIL_BACKEND: {}".format(EMAIL_BACKEND))
-    SENDGRID_API_KEY = require_env("SENDGRID_API_KEY")
-
-if SIMPLE_SENDGRID_ENABLED:
-    SENDGRID_TEMPLATE_ID = require_env("SENDGRID_TEMPLATE_ID")
-    SENDGRID_SANDBOX_MODE_IN_DEBUG = False
-
-if [SES_ENABLED, SENDGRID_ENABLED].count(True) > 1:
-    raise ImproperlyConfigured("Multiple email integrations enabled.")
-
-if DT_STRIPE_ENABLED or STRIPE_ENABLED:
-    STRIPE_STATIC_HOST = require_env("STATIC_HOST")
-    STRIPE_PUBLIC_KEY = require_env("STRIPE_PUBLIC_KEY")
-    STRIPE_SECRET_KEY = require_env("STRIPE_SECRET_KEY")
-    STRIPE_WEBHOOK_SIGNING_SECRET = require_env("STRIPE_WEBHOOK_SIGNING_SECRET")
-    STRIPE_SUPPORT_EMAIL = SUPPORT_EMAIL
 
 from .project import *

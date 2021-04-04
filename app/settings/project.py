@@ -7,12 +7,10 @@ should be defined in .env.
 from .env_loader import fetch_env
 
 # Prepended to base settings
-# TODO: change APP
-DJANGO_ENV = fetch_env("DJANGO_APP_ENV", default="DEV")
-# TODO: change defaults
-SITE_DOMAIN = fetch_env("SITE_DOMAIN", default="example.com")
-SITE_NAME = fetch_env("SITE_NAME", default="Example Site")
-SUPPORT_EMAIL = "support@" + SITE_DOMAIN
+DJANGO_ENV = fetch_env("DJANGO_GYU_ENV", default="DEV")
+SITE_DOMAIN = fetch_env("SITE_DOMAIN", default="namgyu.io")
+SITE_NAME = fetch_env("SITE_NAME", default="Namgyu Ho")
+SUPPORT_EMAIL = "help@namgyu.io"
 
 # Appended to base settings
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True

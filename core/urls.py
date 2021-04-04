@@ -7,7 +7,5 @@ app_name = "core"
 
 urlpatterns = [
     path("", IndexView.as_view(), name="index"),
-    path("page/<path:menu_path>/", PageView.as_view(), name="page"),
-    path("page/", PageView.as_view(), name="page-base"),
 ]
 
