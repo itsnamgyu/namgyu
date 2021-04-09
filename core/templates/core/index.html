@@ -2,54 +2,44 @@
 {% load bootstrap4 %}
 {% load static %}
 {% load dt_content %}
+{% load blurb %}
 {% load image_blurb %}
 
 {% block head %}
-<title>Django Template</title>
-<link rel="stylesheet" href="{% static 'dt_content/css/styles.css' %}">
-<link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
-{% endblock head%}
+  <title>Django Template</title>
+  <link rel="stylesheet" href="{% static 'dt_content/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+{% endblock head %}
 
 {% block body %}
 
-<div class="header header-lg">
-  {% image_blurb 'index/background' placeholder='core/img/background.jpg' as image_blurb %}
-  <div class="header-background" style="background-image: url('{{ image_blurb.src }}')">
-  </div>
-  <div class="header-tint"></div>
-  <div class="header-content">
-    <div class="container h-100 d-flex flex-column justify-content-center">
-      <div class="hero-title">django-template</div>
+  {% include 'core/intro_header.html' with home_active=True %}
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9">
+        <div class="introduction">
+          <div class="header">Welcome To<br>My <span class="accent">Humble</span> Abode.</div>
+          <div class="content">
+            안녕하세요. 딥러닝 연구를 하는 허남규입니다. 의료 분야에서 딥러닝 맛을 보고 현재
+            person re-identification, metric learning, meta learning 및 optimization theory 연구에 몰두하고 있습니다.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-9">
+        <div class="shortcuts">
+          <a href="{% url 'core:work' %}" class="btn link">
+            <i class="fas fa-check-square mr-2"></i>Check out my work<i class="fas fa-chevron-right"></i>
+          </a>
+          <br>
+          <a href="{% url 'core:blog' %}" class="btn link">
+            <i class="fas fa-feather mr-2"></i>Read what I've wrote<i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
-<div class="container my-3">
-  {% include image_blurb.update_link_template_name %}
-</div>
-
-<div class="content">
-  <div class="container py-5">
-    <h2>This is a placeholder app for django-template</h2>
-    <p><i class="fas fa-rocket"></i> Good luck on your project!</p>
-
-    {% bootstrap_messages as messages %}
-    {% if messages.strip %} {# #}
-    <h4 class="mt-4">Here are some Bootstrap messages</h4>
-    <p>{{ messages }}</p>
-    {% endif %}
-
-    <h4 class="mt-4">dt-content</h4>
-    <a href="{% url 'dt-content:index' %}" class="btn btn-primary mt-2">
-      Admin Console
-    </a>
-
-    <h4 class="mt-4">Support The Project 💌</h4>
-    <a href="https://github.com/itsnamgyu/django-template">
-      <button class="btn btn-dark px-3 py-2 mt-2"><i class="fab fa-github mr-2"></i>View on GitHub</button>
-    </a>
-  </div>
-</div>
 
 {% endblock body %}
 {% block body_script %}

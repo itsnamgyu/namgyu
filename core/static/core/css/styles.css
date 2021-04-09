@@ -1,42 +1,123 @@
-.content {
-  min-height: 60vh;
+.intro-header {
+  margin-bottom: 3rem;
 }
 
-.submenu {
-  padding: 3rem 0;
-  border-bottom: 1px solid #eee;
+.intro-header .header {
+  font-size: 1.625rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  color: #222;
 }
 
-.submenu-link {
-  display: block;
-  font-size: 1rem;
+.intro-header .tab {
+  margin: 0 1.25rem 0 0;
+  font-size: 0.875rem;
+  padding: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.intro-header .tab:hover {
+  color: #ff0048;
+}
+
+.intro-header .tab.active {
+  color: #444;
+}
+
+.intro-header .tab.active:hover {
+  color: #ff0048;
+}
+
+.intro-header .profile-image {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 99999rem;
+}
+
+.intro-header {
+  padding: 1rem 0;
+  border-bottom: 1px #eee solid;
+}
+
+.introduction {
+  margin-bottom: 3rem;
+}
+
+.introduction .header {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.introduction .header .accent {
+  color: #ff0048;
+  /*color: black;*/
+  /*text-decoration: underline;*/
+}
+
+.introduction .content {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #777;
   margin-bottom: 0.5rem;
 }
 
-.submenu-link:hover {
-  text-decoration: none;
-}
-
-.submenu-link:last-child {
-  margin-bottom: 0;
-}
-
-.hero-title {
-  font-size: 1.75rem;
-  font-weight: 900;
-  color: white;
-}
-
-@media (min-width: 992px) {
-  .content {
-    min-height: 75vh;
-  }
-
-  .submenu-link {
-    font-size: 1.125rem;
-  }
-
-  .hero-title {
+@media (min-width: 768px) {
+  .introduction .header {
     font-size: 2.5rem;
   }
+
+  .introduction .content {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.introduction .subheader {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #888;
+}
+
+.shortcuts .link {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #f8f8f8;
+  color: #666;
+  border-radius: 1rem;
+}
+
+.shortcuts .link:hover {
+  background-color: #eee;
+}
+
+.shortcuts .link .fa-chevron-right {
+  margin-left: 1rem;
+  display: inline-block;
+  transition: margin 0.25s ease-in-out;
+}
+
+.shortcuts .link:hover .fa-chevron-right {
+  margin-left: 1.125rem;
+}
+
+.writings .header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #444;
+}
+
+.work .header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #444;
 }

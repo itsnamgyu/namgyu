@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% load dt_content %}
+{% load blurb %}
+{% load image_blurb %}
+
+{% block head %}
+  <title>Django Template</title>
+  <link rel="stylesheet" href="{% static 'dt_content/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+{% endblock head %}
+
+{% block body %}
+
+  {% include 'core/intro_header.html' with work_active=True %}
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9">
+        <p>This is what I'm working on.</p>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock body %}
+{% block body_script %}
+{% endblock body_script %}
