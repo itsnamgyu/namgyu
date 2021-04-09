@@ -138,7 +138,6 @@ USE_TZ = True
 
 # Static files
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 if DEBUG:
     STATIC_ROOT = fetch_env("STATIC_ROOT", default=None)
 else:
