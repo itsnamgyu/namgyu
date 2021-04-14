@@ -9,6 +9,7 @@
   <title>Django Template</title>
   <link rel="stylesheet" href="{% static 'dt_content/css/styles.css' %}">
   <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/blog.css' %}">
 {% endblock head %}
 
 {% block body %}
@@ -18,8 +19,66 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-md-9">
-        <div class="introduction">
-          <p>This is some stuff I've written.</p>
+        <div class="blog">
+          <div class="title">제가 <span class="accent">지금까지 써온 글</span>입니다. 앞으로 계속 더 추가될 예정입니다 🦄</div>
+
+          <div class="year">2017</div>
+          <a class="post-card" href="https://medium.com/@itsnamgyu/python-기초기초오-for문-1-47576187e562" target="_blank">
+            <div class="d-flex">
+              <div class="icon">
+                <i class="fab fa-medium"></i>
+              </div>
+              <div>
+                <div class="header">
+                  Python 기초기초오
+                  <i class="fas fa-chevron-right chevron"></i>
+                </div>
+                <div class="description">
+                  Python에서 for문 제대로 이해하기. 컴퓨팅사고력 학부 멘토 활동 중 학생들의 이해를 돕고자 간단하게 작성했습니다.
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <div class="year">2018</div>
+          <a class="post-card" href="https://keraskorea.github.io/posts/2018-10-24-little_data_powerful_model/"
+             target="_blank">
+            <div class="d-flex">
+              <div class="icon">
+                <i class="fas fa-link"></i>
+              </div>
+              <div>
+                <div class="header">
+                  작은 데이터셋으로 강력한 이미지 분류 모델 설계하기
+                  <i class="fas fa-chevron-right chevron"></i>
+                </div>
+                <div class="description">
+                  Keras 공식 튜토리얼 중 Francois Chollet의 "Building powerful image classification models using very
+                  little data" 번역글. 2017년 Contributhon 프로젝트에서 진행한 번역입니다.
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <div class="year">2019</div>
+          <a class="post-card" href="https://tutorials.pytorch.kr/recipes/recipes/loading_data_recipe.html"
+             target="_blank">
+            <div class="d-flex">
+              <div class="icon">
+                <i class="fas fa-link"></i>
+              </div>
+              <div>
+                <div class="header">
+                  PyTorch에서 데이터 불러오기
+                  <i class="fas fa-chevron-right chevron"></i>
+                </div>
+                <div class="description">
+                  PyTorch 공식 튜토리얼 레시피 "Loading Data in PyTorch" 번역글.
+                  2018년 Contributhon 프로젝트에서 진행한 번역입니다.
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
