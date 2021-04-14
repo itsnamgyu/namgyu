@@ -1,23 +1,8 @@
-.blog {
+.work {
   margin-bottom: 5rem;
 }
 
-.blog .year {
-  font-size: 1.125rem;
-  color: #444;
-  font-weight: 900;
-  text-align: center;
-  margin: 1rem 0;
-}
-
-@media (min-width: 768px) {
-  .blog .year {
-    font-size: 1.25rem;
-    margin: 1rem 0;
-  }
-}
-
-.post-card {
+.work-card {
   display: block;
   padding: 1rem 1rem;
   margin-bottom: 0.5rem;
@@ -28,14 +13,14 @@
 }
 
 @media (min-width: 768px) {
-  .post-card {
+  .work-card {
     padding: 1.25rem 1.5rem;
     margin-bottom: 1rem;
     border-radius: 1rem;
   }
 }
 
-.post-card .icon {
+.work-card .icon {
   display: none;
   width: 6rem;
   justify-content: center;
@@ -47,12 +32,12 @@
 }
 
 @media (min-width: 768px) {
-  .post-card .icon {
+  .work-card .icon {
     display: flex;
   }
 }
 
-.post-card:hover {
+.work-card:hover {
   background: #f4f4f4;
   -webkit-transform: translate3d(0, -0.0025rem, 0) scale(1.01, 1.01);
   transform: translate3d(0, -0.0025rem, 0) scale(1.01, 1.01);
@@ -64,7 +49,7 @@
 }
 
 @media (min-width: 768px) {
-  .post-card:hover {
+  .work-card:hover {
     -webkit-transform: translate3d(0, -0.0025rem, 0) scale(1.01, 1.01);
     transform: translate3d(0, -0.0025rem, 0) scale(1.01, 1.01);
     margin-top: 0.1rem;
@@ -72,11 +57,11 @@
   }
 }
 
-.post-card *:last-child {
+.work-card *:last-child {
   margin-bottom: 0;
 }
 
-.post-card .header {
+.work-card .header {
   display: flex;
   align-items: center;
   font-size: 1rem;
@@ -86,41 +71,40 @@
   transition: 0.2s ease-out;
 }
 
-.post-card:hover .header {
+.work-card:hover .header {
   color: #ff0048;
 }
 
-.post-card .chevron {
-  margin-left: 0.5rem;
-  transition: 0.2s ease-out;
-}
-
-.post-card:hover .chevron {
-  margin-left: 0.7rem;
-}
-
-.post-card .description {
+.work-card .description {
   font-weight: 500;
   color: #888;
   transition: 0.2s ease-out;
 }
 
+.work-card .click {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  color: #444;
+}
+
+
 @media (min-width: 768px) {
-  .post-card .header {
+  .work-card .header {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
   }
 
-  .post-card .chevron {
+  .work-card .chevron {
     margin-left: 0.5rem;
     transition: 0.2s ease-out;
   }
 
-  .post-card:hover .chevron {
+  .work-card:hover .chevron {
     margin-left: 0.7rem;
   }
 
-  .post-card .description {
+  .work-card .description {
     font-size: 1.25rem;
   }
 

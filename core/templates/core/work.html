@@ -9,6 +9,7 @@
   <title>Django Template</title>
   <link rel="stylesheet" href="{% static 'dt_content/css/styles.css' %}">
   <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/work.css' %}">
 {% endblock head %}
 
 {% block body %}
@@ -18,7 +19,31 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-md-9">
-        <p>This is what I'm working on.</p>
+        <div class="work">
+          <div class="title">제가 <span class="accent">지금까지 한 일</span>입니다. 눌러서 자세히 톺아보실 수 있습니다 👨‍💻</div>
+
+          <a class="work-card" href=""
+             target="_blank">
+            <div class="d-flex mb-4">
+              <div class="icon">
+                <i class="fas fa-flask"></i>
+              </div>
+              <div>
+                <div class="header">
+                  KAIST OSI 랩 인턴 [ 2021년 1월 - ]
+                </div>
+                <div class="description">
+                  Person re-identification, metric learning, meta learning 및 optimization theory
+                  연구에 몰두하고 있습니다
+                </div>
+              </div>
+            </div>
+            <div class="click">
+              <i class="fas fa-chevron-up"></i><br>
+              눌러서 톺아보기
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>

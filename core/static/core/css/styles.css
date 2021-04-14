@@ -146,25 +146,32 @@
 .shortcuts .link {
   font-size: 1.125rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   padding: 0.75rem 1.5rem;
-  background-color: #f8f8f8;
+  background-color: #f4f4f4;
   color: #666;
   border-radius: 1rem;
+  animation-duration: 1s;
+}
+
+.shortcuts .link:hover {
+  background-color: #e8e8e8;
 }
 
 .shortcuts .link.link-1 {
-  animation-duration: 1s;
   animation-delay: 0.3s;
 }
 
 .shortcuts .link.link-2 {
-  animation-duration: 1s;
   animation-delay: 0.4s;
 }
 
-.shortcuts .link:hover {
-  background-color: #eee;
+.shortcuts .link.link-3 {
+  animation-delay: 0.5s;
+}
+
+.shortcuts .link.link-4 {
+  animation-delay: 0.6s;
 }
 
 .shortcuts .link .fa-chevron-right {
@@ -189,4 +196,25 @@
   font-weight: 700;
   line-height: 1.25;
   color: #444;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  word-break: break-word;
+  color: #777;
+  width: 80%;
+}
+
+.title .accent {
+  color: #ff0048;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    width: 75%;
+  }
 }
