@@ -42,6 +42,7 @@
   font-size: 0.8125rem;
   padding: 0;
   font-weight: 900;
+  text-decoration: none;
   text-transform: uppercase;
   color: #888;
 }
@@ -151,6 +152,7 @@
   background-color: #f4f4f4;
   color: #666;
   border-radius: 1rem;
+  text-decoration: none;
   animation-duration: 1s;
 }
 
