@@ -178,14 +178,24 @@
   animation-delay: 0.6s;
 }
 
-.shortcuts .link .fa-chevron-right {
-  margin-left: 1rem;
+.shortcuts .link .fa-caret-right {
+  margin-left: 0.5rem;
   display: inline-block;
   transition: margin 0.25s ease-in-out;
 }
 
-.shortcuts .link:hover .fa-chevron-right {
-  margin-left: 1.125rem;
+.shortcuts .link i {
+  display: inline-block;
+  transition: margin 0.25s ease-in-out;
+}
+
+.shortcuts .link:hover .fa-caret-right {
+  margin-left: 0.5rem;
+  margin-right: -0.125rem;
+}
+
+.shortcuts .link:hover i {
+  margin-left: 0.125rem;
 }
 
 .writings .header {
