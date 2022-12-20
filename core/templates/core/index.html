@@ -6,7 +6,7 @@
 {% load image_blurb %}
 
 {% block head %}
-  <title>Django Template</title>
+  <title>namgyu</title>
   <link rel="stylesheet" href="{% static 'dt_content/css/styles.css' %}">
   <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
 {% endblock head %}
@@ -19,24 +19,31 @@
     <div class="row justify-content-center">
       <div class="col-12 col-md-9">
         <div class="introduction">
-          <div class="header">Welcome To<br>My <span class="accent">Humble</span>
-            Abode 🙇‍♂
+          <div class="header">
+            <span class="accent">Rumor has it...</span> <br>
+            you want to know <br class="d-inline d-md-none">
+            who I am 🌝
           </div>
           <div class="content animate__animated animate__fadeInUp">
-            안녕하세요. 딥러닝 연구를 하는 허남규입니다. 의료 분야에서 딥러닝 맛을 보고 현재
-            person re-identification, metric learning, meta learning 및 optimization theory 연구에 몰두하고 있습니다.
+            I'm a masters student at KAIST working on large language models (LLMs) in NLP.
+            I'm interested in making LLMs ready for the real world.
+            I also learn 🎾.
           </div>
         </div>
       </div>
 
       <div class="col-12 col-md-9">
         <div class="shortcuts">
-          <a href="{% url 'core:work' %}" class="btn link link-1 animate__animated animate__fadeInUp">
-            <i class="fas fa-check-square mr-2"></i>지금까지 한 일<i class="fas fa-chevron-right"></i>
-          </a>
-          <br>
-          <a href="{% url 'core:blog' %}" class="btn link link-2 animate__animated animate__fadeInUp">
-            <i class="fas fa-feather mr-2"></i>지금까지 쓴 글<i class="fas fa-chevron-right"></i>
+{#          <a href="{% url 'core:work' %}" class="btn link link-1 animate__animated animate__fadeInUp">#}
+{#            <i class="fas fa-check-square mr-2"></i>지금까지 한 일<i class="fas fa-chevron-right"></i>#}
+{#          </a>#}
+{#          <br>#}
+{#          <a href="{% url 'core:blog' %}" class="btn link link-2 animate__animated animate__fadeInUp">#}
+{#            <i class="fas fa-feather mr-2"></i>지금까지 쓴 글<i class="fas fa-chevron-right"></i>#}
+{#          </a>#}
+{#          <br>#}
+          <a href="https://github.com/itsnamgyu" target="_blank" class="btn link link-3 animate__animated animate__fadeInUp">
+            <i class="fas fa-graduation-cap mr-2"></i>Google Scholar<i class="fas fa-chevron-right"></i>
           </a>
           <br>
           <a href="https://github.com/itsnamgyu" target="_blank" class="btn link link-3 animate__animated animate__fadeInUp">
