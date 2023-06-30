@@ -162,6 +162,10 @@
   background-color: #e8e8e8;
 }
 
+.shortcuts .link.link-0 {
+  animation-delay: 0.2s;
+}
+
 .shortcuts .link.link-1 {
   animation-delay: 0.3s;
 }
