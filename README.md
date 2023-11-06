@@ -1,2 +1,1 @@
-# namgyu.io
-
+# namgyu.com
